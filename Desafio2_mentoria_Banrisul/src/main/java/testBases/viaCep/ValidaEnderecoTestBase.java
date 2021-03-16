@@ -8,7 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-public class SimpleTestBase {
+public class ValidaEnderecoTestBase {
 	
 	protected static RequestSpecification requestSpec;
     protected static ResponseSpecification responseSpec;
@@ -23,15 +23,16 @@ public class SimpleTestBase {
     public static void buildRequestSpec(){
         requestSpec = new RequestSpecBuilder()
                 .setBaseUri("https://viacep.com.br")
-                .setBasePath("/ws/91060900/" + requestType)
+                .setBasePath("/ws/RS/Gravatai/Barroso/" + requestType)
                 .build();
     }
-
+    
     public static void buildResponseSpec(){
         responseSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
                 .expectContentType(ContentType.JSON)
                 .build();
     }
+
 
 }

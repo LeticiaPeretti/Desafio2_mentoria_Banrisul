@@ -14,7 +14,7 @@ public class FileOperations {
 	        InputStream inputStream = null;
 	        Properties prop = new Properties();
 	        try {
-	            File file = new File(DIR_PATH_PROPERTIES+ fileName+ ".properties");
+	            File file = new File(DIR_PATH_PROPERTIES+fileName+".properties");
 	            inputStream = new FileInputStream(file);
 	            prop.load(inputStream);
 	            return prop;
@@ -23,9 +23,16 @@ public class FileOperations {
 	        }
 	        return prop;
 	    }
+	    public static void setProperties(String fileName, String propKey, String propValue){
+	        Properties prop = getProperties(fileName);
+	        try {
+	            OutputStream outputStream = new FileOutputStream(DIR_PATH_PROPERTIES + fileName + ".properties");
+	            prop.setProperty(propKey, propValue);
+	            prop.store(outputStream, null);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
 	    
 	    
-
-	 	
-
 }
