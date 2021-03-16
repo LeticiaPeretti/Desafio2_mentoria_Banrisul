@@ -13,11 +13,11 @@ O script de teste foi desenvolvido em API na URL:https://viacep.com.br/ws/900201
 * JUnit - junit.org
 
 ## Execução:
-Abra o projeto "Desafio2_mentoria_Banrisul" com o Eclipse IDE
-Expandir o pacote "src/test/java", expandir Package viaCep
-Clique com o botão direito na classe "validaCep.java"
-Clique no menu "Run As -> JUnit Test"
-Dependências obtidas através do gerenciador de dependências do Gradle.
+* Abra o projeto "Desafio2_mentoria_Banrisul" com o Eclipse IDE
+* Expandir o pacote "src/test/java", expandir Package viaCep
+* Clique com o botão direito na classe "validaCep.java"
+* Clique no menu "Run As -> JUnit Test"
+* Dependências obtidas através do gerenciador de dependências do Gradle.
 
 ## PASSO A PASSO
 * Acessar a URL:https://viacep.com.br/ws/90020100/json/
