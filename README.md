@@ -23,8 +23,8 @@ O script de teste foi desenvolvido em API na URL:https://viacep.com.br/ws/900201
 * Acessar a URL:https://viacep.com.br/ws/90020100/json/
 * Consultar CEP valido
 * Retornará o CEP, logradouro, complemento, bairro, localidade, UF, ibge, gia, ddd, siafi.
-* Valida dados
+* Validar dados
 * Consultar CEP inexistente 
-* Valida CEP inexistente com mensagem na tela "erro": true
-* Consulta CEP com formato invalido
+* Validar CEP inexistente com mensagem na tela "erro": true
+* Consultar CEP com formato invalido
 * Valida CEP com formato invalido com mensagem na tela "Erro 400 Ops! Verifique a sua URL (Bad Request)"
