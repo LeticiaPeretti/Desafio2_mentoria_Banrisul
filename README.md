@@ -11,6 +11,7 @@ O script de teste foi desenvolvido em API na URL:https://viacep.com.br/ws/900201
 * JDK 8 - oracle.com
 * Selenium WebDriver - seleniumhq.org
 * JUnit - junit.org
+* REST Assured
 
 ## Execução:
 * Abra o projeto "Desafio2_mentoria_Banrisul" com o Eclipse IDE
@@ -20,11 +21,26 @@ O script de teste foi desenvolvido em API na URL:https://viacep.com.br/ws/900201
 * Dependências obtidas através do gerenciador de dependências do Gradle.
 
 ## PASSO A PASSO
-* Acessar a URL:https://viacep.com.br/ws/90020100/json/
-* Consultar CEP valido
-* Retornará o CEP, logradouro, complemento, bairro, localidade, UF, ibge, gia, ddd, siafi.
-* Validar dados
-* Consultar CEP inexistente 
-* Validar CEP inexistente com mensagem na tela "erro": true
-* Consultar CEP com formato invalido
-* Valida CEP com formato invalido com mensagem na tela "Erro 400 Ops! Verifique a sua URL (Bad Request)"
+* Utilizando a URL:https://viacep.com.br/ws/90020100/json/
+* Cenário: Consulta CEP valido
+* Dado que o usuário inseri um CEP válido
+* Quando o serviço é consultado
+* Então é retornado o CEP, logradouro, complemento, bairro, localidade, uf e ibge
+
+* Cenário: Consulta CEP inexixtente
+* Dado que o usuário inseri um CEP que não exista na base dos Correios
+* Quando o serviço é consultado
+* Então é retornado um atributo erro
+
+* Cenário: Consulta CEP com formato inválido
+* Dado que o usuário inseri um CEP com formato inválido
+* Quando o serviço é consultado
+* Então é retornado uma mensagem de erro
+
+Extras:
+* Utilizando a URL:https://viacep.com.br/ws/Gravatai/Barroso/json/
+* Cenário: Consulta Endereço
+* Dado que o usuário inseri um Endereço
+* Quando o serviço é consultado
+* Então é retornado uma lista de  Cep, logradouro, complemento, bairro, localidade, uf e ibge.
+
